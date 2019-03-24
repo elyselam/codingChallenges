@@ -10,6 +10,6 @@ function palindrome(str){
     //shortens both sides
   return palindrome(str.slice(1,-1));
   
-}
-palindrome('racecar');
-
+};
+console.log();
+console.log(palindrome('racecar'));
