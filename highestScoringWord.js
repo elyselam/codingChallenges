@@ -7,7 +7,7 @@
 function highestScoringWord(str) {
 	let words = str.split(' ');
 	let max = 0;
-	let highest = ""
+	let highest = "";
 	
 	for (let i = 0; i < words.length; i++) {
 	  let word = words[i];
@@ -17,10 +17,10 @@ function highestScoringWord(str) {
 		sum += word.charCodeAt(j) - 96 // bc instruction says a = 1
 	  }
 	  if (max < sum) {
-		highest = word
+		highest = word;
 	  }
 	}
-	return highest
+	return highest;
   }
   
   console.log(highestScoringWord("hello world")); // "world"
