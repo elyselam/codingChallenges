@@ -25,3 +25,21 @@ function highestScoringWord(str) {
   
   console.log(highestScoringWord("hello world")); // "world"
   
+// //using forEach
+//   function highestScoringWord(string) {
+// 	var myArr = string.split(" ");
+  
+// 	var myMax = 0;
+// 	var highestWord = "";
+  
+// 	myArr.forEach( function(word) {
+// 	  var score = 0;
+// 	  word.split("").forEach( ele => score += ele.charCodeAt(0)-96 );
+// 	  if (myMax < score) {
+// 		myMax = score;
+// 		highestWord = word;
+// 	  }
+// 	});
+
+// 	return highestWord;
+// }
