@@ -1,17 +1,30 @@
 
 //Palindrome Permutation: Given a string, write a function to check if it is a permutation of a palin- drome. A palindrome is a word or phrase that is the same forwards and backwards. A permutation is a rearrangement of letters. The palindrome does not need to be limited to just dictionary words.
-const palPerm = str => {
-    let arr1 = [];
-    let arr2 = [];
-    arr1 = str.split(' ').join('').split('');
-    for (let i = 0; i < arr1.length ; i++) {
 
-        arr2[i] = arr1[arr1.length-1-i];
+function palPerm(str) {
+    str = str.toLowerCase().split(' ').join('');
+    let myHash = {};
+    let oddCount = 0;
+  
+    for (let i = 0; i < str.length; i++) {
+      if (!myHash[str[i]]) {
+        myHash[str[i]] = 1;
+    } else {
+        myHash[str[i]] += 1;
     }
-    console.log (arr1,arr2);
-
-    return arr1.join('') === arr2.join('');
 }
-
-let input = 'taco cat';
-console.log(palPerm(input)) //true "tacocat", "atcocta" 
+console.log(myHash)
+  
+    for (key in myHash) {
+      if (myHash[key] % 2 === 1) {
+        oddCount += 1;
+      }
+    }
+    
+    return oddCount <= 1;
+  }
+  console.log(palPerm('Tact Coa'));
+//   console.log(palPerm('Tact Coa  '));
+//   console.log(palPerm('bbba'));
+//   console.log(palPerm('bb'));
+//   console.log(palPerm('b'));
