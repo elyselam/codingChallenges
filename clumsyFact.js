@@ -96,4 +96,4 @@ const clumsy = n => {
 // console.log(clumsy(1));
 // console.log(clumsy(2));
 // console.log(clumsy(3));
-console.log(clumsy(4));
+console.log(clumsy(10));
