@@ -1,1 +1,1 @@
-# Coding Challenges in JS
+# Cracking the Coding Interview Questions among other things in JS
