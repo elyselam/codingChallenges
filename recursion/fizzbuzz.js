@@ -14,12 +14,13 @@ function fizzBuzz(n) {
 	return fizzBuzz(n-1);
 
 };
-fizzBuzz(15)
+//fizzBuzz(15)
 
 function fizzBuzzArray(n, result = []) {
 	if (n < 1) {
 		return result;
 	} 
+	
 	if (n % 3 === 0 && n % 5 === 0) {
 		result.push('fizzbuzz');
 	} else if (n % 3 === 0) {
@@ -29,6 +30,10 @@ function fizzBuzzArray(n, result = []) {
 	} else {
 		result.push(n);
 	}
-	return result.concat(fizzBuzz(n-1));
+	
+	let newItem = fizzBuzzArray(n-1,result);
+	return result.push(newItem);
 }
-console.log(fizzBuzzArray(15))
+let res = fizzBuzzArray(15)
+debugger
+console.log(res)
