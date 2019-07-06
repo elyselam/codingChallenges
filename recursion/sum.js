@@ -5,9 +5,10 @@ const sumArr = arr => {
 		return 0;
 	}
 	//1 + sum([2,3,4,5]
-	//3 + sum([3,4,5])
-	//6 + sum([4,5])
-	//10 + sum([5])
+	//1 + (2 + sum([3,4,5]))
+	//1 + (2 + (3 + sum([4,5])))
+	//1 + (2 + (3 + (4 + sum([5]))))
+	//1 + (2 + (3 + (4 + (5 + sum([]))))
 	//15 :D!
 	//return head + sum(tail)
 	//slice makes a new array

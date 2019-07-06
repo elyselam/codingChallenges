@@ -18,5 +18,5 @@ const isPalindrome = str => {
 
 
 
-isPalindrome('hi'); // false
-isPalindrome('iii'); // true
+console.log(isPalindrome('hi')); // false
+console.log(isPalindrome('iii')); // true
