@@ -1,23 +1,24 @@
-function flatten(arr) {
-	let result = [];
-	for (let i = 0; i < arr.length; i++) {
-		if (isArray(arr[i])) {
-			result.push(flatten(arr[i]));
-		}
-		result.push(arr[i]);		
+const flatten = (arr, result = []) => {
+	arr.forEach(a => {
+		if (Array.isArray(a)) {
+			result = result.concat(flatten(a));
+		} else {
+		result.push(a);		
 	}
+})
 	return result;
 }
 
-function assertEqual(actual, expected, testName) {
-	
-	if (actual.length !== expected.length) {
-		console.log('FAILED [' + testName + '] Expected ' + expected + ', but got ' + actual);
-		} else if (actual === expected) {
-		console.log('passed');
-		}  else {
-		console.log('FAILED [' + testName + '] Expected ' + expected + ', but got ' + actual);
-		}
-	}
+console.log(flatten([1, [2], [[3], 4], 5]))// [1,2,3,4,5]
 
-assertEqual([1, [2], [[3], 4], 5], [1,2,3,4,5], flatten)
+
+
+// const flatten = (arr, result = []) => {
+// 	for (let i = 0; i < arr.length; i++) {
+// 		if (Array.isArray(arr[i])) {
+// 			result.concat(flatten(arr[i]));
+// 		}
+// 		result.push(arr[i]);		
+// 	}
+// 	return result;
+// }
