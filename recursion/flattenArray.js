@@ -1,8 +1,10 @@
 const flatten = (arr, result = []) => {
 	arr.forEach(a => {
+		//if item is an array
 		if (Array.isArray(a)) {
 			result = result.concat(flatten(a));
 		} else {
+			//if just a value, push to result
 		result.push(a);		
 	}
 })
