@@ -12,8 +12,6 @@ const flattenObj = obj => {
 	}
 	return result
 }
-
-
 let test = {
 	"Key1" : "1",
 	"Key2" : {
